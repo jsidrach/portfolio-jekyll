@@ -15,7 +15,12 @@
       <ul class="nav navbar-nav">
         {% for circle in site.data.circlebar %}
           <li>
-            <a href="{{ circle.link | prepend: site.baseurl }}">{{ circle.name }}</a>
+            {% assign startlink = circle.link | truncate: 1 %}
+            {% if startlink == '/' %}
+              <a href="{{ circle.link | prepend: site.baseurl }}">{{ circle.name }}</a>
+            {% else %}
+              <a href="{{ circle.link }}">{{ circle.name }}</a>
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
@@ -30,10 +35,15 @@
       <div class="circle-bar">
         {% for circle in site.data.circlebar %}
           <div class="circle-bar-element">
-            <a href="{{ circle.link | prepend: site.baseurl }}" class="circle-bar-link">
-              <span class="circle-bar-shadow"></span>
-              <div class="circle-bar-icon" style="background-image:url({{ circle.icon | prepend:'/public/icons/' | prepend:site.baseurl }});"></div>
-              <span class="circle-bar-text">{{ circle.name }}<span>
+            {% assign startlink = circle.link | truncate: 1 %}
+            {% if startlink == '/' %}
+              <a href="{{ circle.link | prepend: site.baseurl }}" class="circle-bar-link">
+            {% else %}
+              <a href="{{ circle.link }}" class="circle-bar-link">
+            {% endif %}
+            <span class="circle-bar-shadow"></span>
+            <div class="circle-bar-icon" style="background-image:url({{ circle.icon | prepend:'/public/icons/' | prepend:site.baseurl }});"></div>
+            <span class="circle-bar-text">{{ circle.name }}<span>
             </a>
           </div>
         {% endfor %}
