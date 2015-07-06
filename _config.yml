@@ -1,7 +1,7 @@
 # Title of the site
-title: "about-me"
+title: "About-me"
 # Description of the site
-description: "Portfolio template"
+description: "Portfolio theme"
 
 # The subpath of your site. Use "" if you're hosting a blog at the root level.
 baseurl: ""
