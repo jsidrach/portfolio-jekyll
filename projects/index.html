@@ -1,0 +1,67 @@
+---
+title: "Projects"
+layout: default
+---
+
+{% if paginator.page == 1 %}
+  {% include projects-intro.html %}
+{% endif %}
+
+{% for post in paginator.posts  %}
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 box">
+    <h3>{{ post.title }}</h3>
+      {{ post.content }}
+    <div class="project-info">
+      <p>
+        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+        <strong>Libraries:</strong>
+        {% for lib in post.libraries %}
+          <a href="{{ lib.url }}">{{ lib.name }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </p>
+      <p>
+        <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+        <strong>Languages:</strong>
+        {{ post.languages | join: ', ' }}
+      </p>
+      <p>
+        <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+        <strong>Repository:</strong>
+        <a href="{{ post.repository.url }}">{{ post.repository.name }}</a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+<div class="paginate text-center row" >
+{% if paginator.total_pages > 1 %}
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: '/index.html', '/' }}">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <strong>{{ page }}</strong>
+    {% elsif page == 1 %}
+      <a href="{{ '/projects/' | prepend: site.baseurl | replace: '//', '/' }}">
+        {{ page }}
+      </a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page |}}">
+        {{ page }}
+      </a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  {% endif %}
+
+{% endif %}
+</div>

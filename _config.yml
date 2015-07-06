@@ -1,0 +1,41 @@
+# Title of the site
+title: "about-me"
+# Description of the site
+description: "Portfolio template"
+
+# The subpath of your site. Use "" if you're hosting a blog at the root level.
+baseurl: ""
+# The base hostname & protocol for your site.
+url: "jsidrach.github.io/jekyll-about-me/"
+
+# Articles per page
+paginate: 3
+# Makes pagination working
+paginate_path: /projects/page/:num
+
+# Do not publish these files
+exclude: ["README.md", "CHANGELOG.md", "Gemfile", "Gemfile.lock", "LICENSE"]
+
+# Makes pretty (descriptive) permalinks.
+permalink: /projects/:title
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Default templates
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "about"
+  -
+    scope:
+      path : ""
+      type: "posts"
+    values:
+      layout: "project"
+      category: "project"

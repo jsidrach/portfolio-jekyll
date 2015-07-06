@@ -1,0 +1,43 @@
+<!-- Small screens -->
+<nav class="navbar navbar-default hidden-sm hidden-md hidden-lg" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#circlebar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- Hidden on larger screens -->
+      <span class="navbar-brand">{{ site.title }}</span>
+    </div>
+    <div class="collapse navbar-collapse" id="circlebar-collapse">
+      <ul class="nav navbar-nav">
+        {% for circle in site.data.circlebar %}
+          <li>
+            <a href="{{ circle.link | prepend: site.baseurl }}">{{ circle.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Large screens -->
+<nav class="navbar navbar-default hidden-xs text-center navbar-icons" role="navigation">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="circlebar-collapse">
+      <div class="circle-bar">
+        {% for circle in site.data.circlebar %}
+          <div class="circle-bar-element">
+            <a href="{{ circle.link | prepend: site.baseurl }}" class="circle-bar-link">
+              <span class="circle-bar-shadow"></span>
+              <div class="circle-bar-icon" style="background-image:url({{ circle.icon | prepend:'/public/icons/' | prepend:site.baseurl }});"></div>
+              <span class="circle-bar-text">{{ circle.name }}<span>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</nav>

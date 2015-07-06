@@ -1,0 +1,140 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin filter($filter) {
+  -webkit-filter: $filter;
+     -moz-filter: $filter;
+      -ms-filter: $filter;
+          filter: $filter;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+          transition: $transition;
+}
+
+@mixin text-shadow($color) {
+  text-shadow: 1px 0 0 $color, -1px 0 0 $color, 0 1px 0 $color, 0 -1px 0 $color, 0.5px 0.5px $color, -0.5px -0.5px 0 $color, 0.5px -0.5px 0 $color, -0.5px 0.5px 0 $color;
+}
+
+$circle-bar-height: 96px;
+$circle-bar-icon-size: 64px;
+$circle-bar-icon-zoom: 1.3125;
+$circle-bar-shadow-size: 96px;
+
+.circle-bar {
+  height: $circle-bar-height;
+}
+
+.circle-bar-element {
+  height: $circle-bar-height;
+  width: $circle-bar-icon-size;
+
+  display: inline-block;
+  position: relative;
+
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.circle-bar-icon {
+  width: $circle-bar-icon-size;
+  height: $circle-bar-icon-size;
+
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  border-radius: 50%;
+
+  @include transition(all 0.2s ease-out);
+  //@include filter(grayscale(1) blur(1px));
+}
+
+.circle-bar-shadow {
+  width: $circle-bar-icon-size;
+  height: $circle-bar-icon-size;
+
+  position: absolute;
+  display: inline-block;
+  text-indent: -9000px;
+
+  border-radius: 50%;
+  @include transition(all 0.4s ease);
+}
+
+.circle-bar-text {
+  line-height: $circle-bar-icon-zoom*$circle-bar-icon-size;
+  width: $circle-bar-icon-zoom*$circle-bar-icon-size;
+
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+
+  @include text-shadow(black);
+  @include transition(opacity 0.2s ease-in-out);
+}
+
+.circle-bar-link {
+  position: absolute;
+
+  display: block;
+  margin-top: ($circle-bar-height - $circle-bar-icon-size)/2;
+
+  @include transition(all 0.2s ease);
+
+  &:hover {
+    z-index: 9000;
+
+    margin-top: ($circle-bar-height - $circle-bar-icon-zoom*$circle-bar-icon-size)/2;
+    margin-left: -$circle-bar-icon-size*($circle-bar-icon-zoom - 1)/2;
+
+    @include transition(all 0.2s ease-out);
+
+    .circle-bar-shadow {
+      width: $circle-bar-shadow-size;
+      height: $circle-bar-shadow-size;
+
+      margin-top: -($circle-bar-shadow-size - $circle-bar-icon-zoom*$circle-bar-icon-size)/2;
+      margin-left: -($circle-bar-shadow-size - $circle-bar-icon-zoom*$circle-bar-icon-size)/2;
+
+      opacity: 0.6;
+      background-color: #CCC;
+      border-radius: 50%;
+    }
+
+    .circle-bar-icon {
+      width: $circle-bar-icon-zoom*$circle-bar-icon-size;
+      height: $circle-bar-icon-zoom*$circle-bar-icon-size;
+      line-height: $circle-bar-icon-zoom*$circle-bar-icon-size;
+
+      border-radius: 50%;
+      //@include filter(none);
+    }
+
+    .circle-bar-text {
+      visibility: visible;
+      opacity: 1;
+
+      @include transition(opacity 0.2s ease-in-out);
+    }
+  }
+}

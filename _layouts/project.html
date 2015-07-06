@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 box">
+    <h3>{{ page.title }}</h3>
+      {{ content }}
+    <div class="project-info">
+      <p>
+        <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+        <strong>Libraries:</strong>
+        {% for lib in page.libraries %}
+          <a href="{{ lib.url }}">{{ lib.name }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </p>
+      <p>
+        <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
+        <strong>Languages:</strong>
+        {{ page.languages | join: ', ' }}
+      </p>
+      <p>
+        <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+        <strong>Repository:</strong>
+        <a href="{{ page.repository.url }}">{{ page.repository.name }}</a>
+      </p>
+    </div>
+  </div>
+</div>
