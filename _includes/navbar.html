@@ -15,8 +15,7 @@
       <ul class="nav navbar-nav">
         {% for circle in site.data.circlebar %}
           <li>
-            {% assign startlink = circle.link | truncate: 1 %}
-            {% if startlink == '/' %}
+            {% if circle.link | truncate: 1 == '/' %}
               <a href="{{ circle.link | prepend: site.baseurl }}">{{ circle.name }}</a>
             {% else %}
               <a href="{{ circle.link }}">{{ circle.name }}</a>
@@ -35,8 +34,7 @@
       <div class="circle-bar">
         {% for circle in site.data.circlebar %}
           <div class="circle-bar-element">
-            {% assign startlink = circle.link | truncate: 1 %}
-            {% if startlink == '/' %}
+            {% if circle.link | truncate: 1 == '/' %}
               <a href="{{ circle.link | prepend: site.baseurl }}" class="circle-bar-link">
             {% else %}
               <a href="{{ circle.link }}" class="circle-bar-link">
