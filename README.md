@@ -9,6 +9,7 @@ Features:
 - customizable top circle bar
 - projects page with pagination
 - bootstrap components
+- custom scroll
 - responsive design
 
 ## Screenshots
@@ -45,6 +46,7 @@ List of repositories and webpages this template is based on:
 
 * [Autm-rb](https://github.com/railsr/autm-rb)
 * [xPaw](https://xpaw.me)
+* [Scrollator](https://github.com/FaroeMedia/scrollator)
 
 ## Assets
 

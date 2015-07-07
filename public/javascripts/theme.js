@@ -1,3 +1,6 @@
 $(document).ready(function() {
-  document.getElementsByTagName("html")[0].style.visibility = "visible";
+  // Fade in effect
+  document.getElementsByTagName("body")[0].style.visibility = "visible";
+  // Custom scroll
+  $(document.body).scrollator();
 });

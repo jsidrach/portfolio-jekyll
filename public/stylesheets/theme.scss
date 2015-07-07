@@ -90,8 +90,6 @@ $footer-fixed-height:      60px;
 
   color: white;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-
-  @include fade-in(0.5s, 2s);
 }
 
 .title {
@@ -109,8 +107,6 @@ $footer-fixed-height:      60px;
 .navbar-icons {
   background-color: transparent;
   border-color: transparent;
-
-  @include fade-in(0.5s, 2s);
 }
 
 // Bottom footer
@@ -127,8 +123,6 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-
-  @include fade-in(0.5s, 2s);
 }
 
 .footer-text {
@@ -167,8 +161,6 @@ body {
 
 .row {
   margin-bottom: 30px;
-
-  @include fade-in(0.5s, 2s);
 }
 
 p {
@@ -199,6 +191,28 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow-y: hidden;
+}
 
+// Fade in effect
+body {
   visibility: hidden; // Do not show anything until content loads
 }
+
+.titles {
+  @include fade-in(0.1s, 0.3s);
+}
+
+.circle-bar {
+  @include fade-in(0.2s, 0.3s);
+}
+
+.content {
+  @include fade-in(0.3s, 0.3s);
+}
+
+.footer {
+  @include fade-in(0.4s, 0.3s);
+}
+
+

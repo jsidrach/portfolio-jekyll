@@ -6,6 +6,7 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="icon" type="image/x-icon"  href="{{ "/favicon.ico" | prepend:site.baseurl }}" />
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,100,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ "/public/stylesheets/fm.scrollator.jquery.css" | prepend:site.baseurl }}">
     <link rel="stylesheet" href="{{ "/public/stylesheets/theme.css" | prepend:site.baseurl }}">
     <link rel="stylesheet" href="{{ "/public/stylesheets/circlebar.css" | prepend:site.baseurl }}">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
@@ -16,7 +17,7 @@
         {% include title.html %}
         {% include navbar.html %}
 
-        <div class="container">
+        <div class="container content">
           {{ content }}
         </div>
       </section>
@@ -24,6 +25,7 @@
     {% include footer.html %}
     <script src="{{ "/public/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/public/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/public/javascripts/fm.scrollator.jquery.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/public/javascripts/theme.js" | prepend:site.baseurl }}"></script>
   </body>
 </html>
