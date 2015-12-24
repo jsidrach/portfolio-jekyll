@@ -60,7 +60,6 @@ List of assets used in this template:
     * [LinkedIn](https://www.iconfinder.com/icons/294706/circle_linkedin_icon)
     * [CV](https://www.iconfinder.com/icons/299090/file_word_icon)
     * [Mail](https://www.iconfinder.com/icons/287559/mail_icon)
-* [CV example](http://www.workandincome.govt.nz/documents/brochures/example-of-skills-focussed-cv.pdf)
 
 ## Licensing
 
