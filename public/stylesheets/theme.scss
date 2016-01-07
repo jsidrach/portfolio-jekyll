@@ -191,7 +191,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow-y: hidden;
+  //overflow-y: hidden;
 }
 
 // Fade in effect
@@ -214,5 +214,3 @@ body {
 .footer {
   @include fade-in(0.4s, 0.3s);
 }
-
-
