@@ -4,9 +4,9 @@ title: "About-me"
 description: "Portfolio theme"
 
 # The subpath of your site. Use "" if you're hosting a blog at the root level.
-baseurl: "/jekyll-about-me"
+baseurl: ""
 # The base hostname & protocol for your site.
-url: "jsidrach.github.io"
+url: "ericozzi.github.io"
 
 # Articles per page
 paginate: 3
