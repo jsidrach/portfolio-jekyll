@@ -1,0 +1,300 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+//
+// Theme
+//
+
+// Switch threshold for small screens
+$small-max-width: 480px;
+
+html {
+  min-width: 320px;
+}
+
+body {
+  background: url(background.png) no-repeat center center fixed;
+  //background: linear-gradient(#FFFDBC, #C9B6D1) no-repeat center center fixed;
+}
+
+a {
+  text-decoration: none;
+  color: #3A3A3A;
+
+  &:hover {
+    border-bottom: 3px solid #3A3A3A;
+  }
+}
+
+.content {
+  color: #3A3A3A;
+}
+
+.header,
+.post-separator {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.85);
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 0 0;
+  font-size: 4em;
+  font-weight: 400;
+
+  @media (max-width: $small-max-width) {
+    display: inline;
+    font-size: 1.75em;
+
+    &::after {
+      content: ' | ';
+    }
+  }
+}
+
+.subtitle {
+  margin: 0 0 0 0;
+  font-size: 1.5em;
+  font-weight: 400;
+
+  @media (max-width: $small-max-width) {
+    display: inline;
+    font-size: 1em;
+  }
+}
+
+.post-separator {
+  text-align: center;
+  margin: 5px auto 7px auto;
+
+  span {
+    font-size: 1.35em;
+    font-weight: 400;
+    border-bottom: 3px solid #3A3A3A;
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin: 0 50px 25px 50px;
+
+  @media (max-width: 1.5 * $small-max-width) {
+    margin: 0;
+  }
+}
+
+.project {
+  margin: 5px;
+  padding: 15px 25px 15px 25px;
+
+  display: flex;
+  flex-basis: 450px;
+  flex-flow: column;
+  text-align: justify;
+
+  background-color: rgba(255, 255, 255, 0.80);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.85);
+
+  span {
+    flex: 2;
+
+    font-size: 1.15em;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 10px 0 5px 0;
+    flex: 2;
+  }
+}
+
+.project-content {
+  flex: 2;
+}
+
+/// Circle bar
+
+// Constants
+$cb-height: 96px;
+$cb-icon-size: 64px;
+$cb-icon-zoom: 1.3125;
+$cb-shadow-size: 96px;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+          transition: $transition;
+}
+
+@mixin text-shadow($color) {
+  text-shadow: 1px 0 0 $color, -1px 0 0 $color,
+               0 1px 0 $color, 0 -1px 0 $color,
+               0.5px 0.5px $color, -0.5px -0.5px 0 $color,
+               0.5px -0.5px 0 $color, -0.5px 0.5px 0 $color;
+}
+
+.circlebar {
+  height: $cb-height;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.circlebar-element {
+  height: $cb-height;
+  width: $cb-icon-size;
+
+  display: inline-block;
+  position: relative;
+
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+.circlebar-icon {
+  width: $cb-icon-size;
+  height: $cb-icon-size;
+
+  position: absolute;
+  overflow: hidden;
+  display: inline-block;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  border-radius: 50%;
+
+  @include transition(all 0.2s ease-out);
+}
+
+.circlebar-shadow {
+  width: $cb-icon-size;
+  height: $cb-icon-size;
+
+  position: absolute;
+  display: inline-block;
+  text-indent: -9000px;
+
+  border-radius: 50%;
+  @include transition(all 0.4s ease);
+}
+
+.circlebar-text {
+  line-height: $cb-icon-zoom * $cb-icon-size;
+  width: $cb-icon-zoom * $cb-icon-size;
+
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+
+  @include text-shadow(black);
+  @include transition(opacity 0.2s ease-in-out);
+}
+
+.circlebar-link {
+  position: absolute;
+
+  display: block;
+  margin-top: ($cb-height - $cb-icon-size) / 2;
+
+  @include transition(all 0.2s ease);
+
+  &:hover {
+    z-index: 9000;
+
+    margin-top: ($cb-height - $cb-icon-zoom*$cb-icon-size) / 2;
+    margin-left: -$cb-icon-size * ($cb-icon-zoom - 1) / 2;
+
+    @include transition(all 0.2s ease-out);
+
+    .circlebar-shadow {
+      width: $cb-shadow-size;
+      height: $cb-shadow-size;
+
+      margin-top: -($cb-shadow-size - $cb-icon-zoom * $cb-icon-size) / 2;
+      margin-left: -($cb-shadow-size - $cb-icon-zoom * $cb-icon-size) / 2;
+
+      opacity: 0.6;
+      background-color: #CCC;
+      border-radius: 50%;
+    }
+
+    .circlebar-icon {
+      width: $cb-icon-zoom * $cb-icon-size;
+      height: $cb-icon-zoom * $cb-icon-size;
+      line-height: $cb-icon-zoom * $cb-icon-size;
+
+      border-radius: 50%;
+    }
+
+    .circlebar-text {
+      visibility: visible;
+      opacity: 1;
+
+      @include transition(opacity 0.2s ease-in-out);
+    }
+  }
+}
+
+//
+// Fonts
+//
+
+// Use Roboto Slab
+html {
+  font-family: 'Roboto Slab', serif;
+}
+
+// Roboto Slab - Thin
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Slab Thin'), local('RobotoSlab-Thin'), url(fonts/RobotoSlab-Thin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+// Roboto Slab - Light
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(fonts/RobotoSlab-Light.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+// Roboto Slab - Regular
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(fonts/RobotoSlab-Regular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+// Roboto Slab - Bold
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(fonts/RobotoSlab-Bold.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}

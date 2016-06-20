@@ -1,21 +1,8 @@
-# About-me
+# Jekyll-Portfolio
 
-Personal portfolio theme for jekyll.
+Simple and lightweight personal portfolio theme for Jekyll.
 
 ## [Demo](http://jsidrach.github.io/jekyll-about-me/)
-
-Features:
-
-- customizable top circle bar
-- projects page with pagination
-- bootstrap components
-- custom scroll
-- responsive design
-
-## Screenshots
-
-![](landing.png)
-![](projects.png)
 
 ## Installation
 
@@ -23,39 +10,28 @@ Features:
 - Clone it: `git clone https://github.com/YOUR-USERNAME/jekyll-about-me`
 - Change path to the cloned repository
 - Install the [GitHub Pages gem](https://pages.github.com/) (includes Jekyll): `bundle install`
-- Edit (at least) the required configuration files (see Customization section)
-- Run the jekyll server: `jekyll serve`
+- Edit the configuration file ([_config.yml](_config.yml))
+- Run the Jekyll server: `jekyll serve`
 
 ## Customization
 
-Edit these files before using:
+* _config.yml - Jekyll and navigation bar configuration
+* projects/ - descriptions of the projects in Markdown format
 
-* _config.yml REQUIRED
-* _data/circlebar.yml - set top bar links
-* index.html - write something about you
-* _includes/projects-intro.html - projects page introduction
-* projects/ - here you can share some of your projects
-* favicon.ico change it or leave the existing one
+## (No) Features
 
-## Contribute
-Pull Requests always welcome.
-
-## References
-
-List of repositories and webpages this template is based on:
-
-* [Autm-rb](https://github.com/railsr/autm-rb)
-* [xPaw](https://xpaw.me)
-* [Scrollator](https://github.com/FaroeMedia/scrollator)
+- Single page (projects)
+- Lightweight
+- Responsive via flex boxes and media queries
+- No pagination
+- No external libraries/dependencies
+- No JavaScript
 
 ## Assets
 
 List of assets used in this template:
 
-* [Background image](https://flic.kr/p/uc6ai8)
 * Top bar icons (modified):
-    * [About me](https://www.iconfinder.com/icons/532766/account_consultant_gear_profile_specialist_support_user_icon)
-    * [Projects](https://www.iconfinder.com/icons/353838/code_html_web_icon)
     * [GitHub](https://www.iconfinder.com/icons/107105/github_square_icon)
     * [LinkedIn](https://www.iconfinder.com/icons/294706/circle_linkedin_icon)
     * [CV](https://www.iconfinder.com/icons/299090/file_word_icon)

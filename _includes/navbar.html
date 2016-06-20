@@ -1,53 +1,18 @@
-<!-- Small screens -->
-<nav class="navbar navbar-default hidden-sm hidden-md hidden-lg" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#circlebar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!-- Hidden on larger screens -->
-      <span class="navbar-brand">{{ site.title }}</span>
-    </div>
-    <div class="collapse navbar-collapse" id="circlebar-collapse">
-      <ul class="nav navbar-nav">
-        {% for circle in site.data.circlebar %}
-          <li>
-            {% assign first_letter = circle.link | split: '' | first %}
-            {% if first_letter == '/' %}
-              <a href="{{ circle.link | prepend: site.baseurl }}">{{ circle.name }}</a>
-            {% else %}
-              <a href="{{ circle.link }}">{{ circle.name }}</a>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Large screens -->
-<nav class="navbar navbar-default hidden-xs text-center navbar-icons" role="navigation">
-  <div class="container">
-    <div class="collapse navbar-collapse" id="circlebar-collapse">
-      <div class="circle-bar">
-        {% for circle in site.data.circlebar %}
-          <div class="circle-bar-element">
-            {% assign first_letter = circle.link | split: '' | first %}
-            {% if first_letter == '/' %}
-              <a href="{{ circle.link | prepend: site.baseurl }}" class="circle-bar-link">
-            {% else %}
-              <a href="{{ circle.link }}" class="circle-bar-link">
-            {% endif %}
-            <span class="circle-bar-shadow"></span>
-            <div class="circle-bar-icon" style="background-image:url({{ circle.icon | prepend:'/public/icons/' | prepend:site.baseurl }});"></div>
-            <span class="circle-bar-text">{{ circle.name }}<span>
-            </a>
-          </div>
-        {% endfor %}
+<nav class="navbar">
+  <div class="circlebar">
+    {% for circle in site.navbar %}
+      <div class="circlebar-element">
+        {% assign first_letter = circle.link | split: '' | first %}
+        {% if first_letter == '/' %}
+          <a href="{{ circle.link | prepend: site.baseurl }}" class="circlebar-link">
+        {% else %}
+          <a href="{{ circle.link }}" class="circlebar-link">
+        {% endif %}
+        <span class="circlebar-shadow"></span>
+        <span class="circlebar-icon" style="background-size: cover; background-image:url({{ circle.icon | prepend:'/public/icons/' | prepend:site.baseurl }});"></span>
+        <span class="circlebar-text">{{ circle.name }}</span>
+        </a>
       </div>
-    </div>
+    {% endfor %}
   </div>
 </nav>

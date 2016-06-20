@@ -3,39 +3,32 @@ title: "About-me"
 # Description of the site
 description: "Portfolio theme"
 
-# The subpath of your site. Use "" if you're hosting a blog at the root level.
+# The subpath of your site - use "" if you're hosting a blog at the root level
 baseurl: "/jekyll-about-me"
-# The base hostname & protocol for your site.
+# The base hostname & protocol for your site
 url: "jsidrach.github.io"
 
-# Articles per page
-paginate: 3
-# Makes pagination working
-paginate_path: /projects/page/:num
-
 # Do not publish these files
-exclude: ["README.md", "CHANGELOG.md", "Gemfile", "Gemfile.lock", "LICENSE"]
+exclude: ["README.md", "Gemfile", "Gemfile.lock", "LICENSE"]
 
-# Makes pretty (descriptive) permalinks.
-permalink: /projects/:title
-
-# Sass configuration
+# Sass configuration - compress resulting stylesheet
 sass:
-  sass_dir: _sass
   style: compressed
 
-# Default templates
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "about"
-  -
-    scope:
-      path : ""
-      type: "posts"
-    values:
-      layout: "project"
-      category: "project"
+# Navigation bar
+navbar:
+  - name: GitHub
+    link: https://github.com/jsidrach/jekyll-about-me
+    icon: repo.svg
+
+  - name: LinkedIn
+    link: https://linkedin.com/in/
+    icon: jobs.svg
+
+  - name: Resume
+    link: /public/resume.pdf
+    icon: resume.svg
+
+  - name: Mail
+    link: mailto:example@mail.com
+    icon: mail.svg
