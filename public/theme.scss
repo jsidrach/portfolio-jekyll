@@ -15,10 +15,10 @@ $color-dark: #3A3A3A;
 
 html {
   min-width: 320px;
+}
+
+body {
   background: url('background.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   //background: linear-gradient(#FFFDBC, #C9B6D1) no-repeat center center fixed;
 }
