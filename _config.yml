@@ -1,10 +1,10 @@
 # Title of the site
-title: "About-me"
+title: "Jekyll Portfolio"
 # Description of the site
-description: "Portfolio theme"
+description: "Simple theme"
 
 # The subpath of your site - use "" if you're hosting a blog at the root level
-baseurl: "/jekyll-about-me"
+baseurl: "/jekyll-portfolio"
 # The base hostname & protocol for your site
 url: "jsidrach.github.io"
 
@@ -18,7 +18,7 @@ sass:
 # Navigation bar
 navbar:
   - name: GitHub
-    link: https://github.com/jsidrach/jekyll-about-me
+    link: https://github.com/jsidrach/jekyll-portfolio
     icon: repo.svg
 
   - name: LinkedIn

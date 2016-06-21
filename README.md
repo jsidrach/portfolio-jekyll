@@ -2,12 +2,12 @@
 
 Simple and lightweight personal portfolio theme for Jekyll.
 
-## [Demo](http://jsidrach.github.io/jekyll-about-me/)
+## [Demo](http://jsidrach.github.io/jekyll-portfolio/)
 
 ## Installation
 
-- [Fork this repository](https://github.com/jsidrach/jekyll-about-me/fork)
-- Clone it: `git clone https://github.com/YOUR-USERNAME/jekyll-about-me`
+- [Fork this repository](https://github.com/jsidrach/jekyll-portfolio/fork)
+- Clone it: `git clone https://github.com/YOUR-USERNAME/jekyll-portfolio`
 - Change path to the cloned repository
 - Install the [GitHub Pages gem](https://pages.github.com/) (includes Jekyll): `bundle install`
 - Edit the configuration file ([_config.yml](_config.yml))
