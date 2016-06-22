@@ -16,7 +16,7 @@ Simple and lightweight personal portfolio theme for Jekyll.
 ## Customization
 
 * _config.yml - Jekyll and navigation bar configuration
-* projects/ - descriptions of the projects in Markdown format
+* _projects/ - descriptions of the projects in Markdown format
 
 ## (No) Features
 
