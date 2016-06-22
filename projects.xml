@@ -11,11 +11,12 @@ layout: null
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for project in site.posts %}
+    {% for project in site.projects %}
       <item>
         <title>{{ project.title | xml_escape }}</title>
         <description>{{ project.content | xml_escape }}</description>
         <url>{{ project.link }}</url>
+        <active>{{ project.active }}</active>
         <libraries>
           {% for lib in project.libraries %}
             <library>
@@ -30,8 +31,6 @@ layout: null
           {% endfor %}
         </languages>
         <pubDate>{{ project.date | date_to_rfc822 }}</pubDate>
-        <link>{{ project.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ project.url | prepend: site.baseurl | prepend: site.url }}</guid>
         {% for tag in project.tags %}
           <category>{{ tag | xml_escape }}</category>
         {% endfor %}

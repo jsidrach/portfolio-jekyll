@@ -2,7 +2,7 @@
   <span >Active Projects</span>
 </div>
 <div class="projects">
-  {% for post in site.posts  %}
+  {% for post in site.projects %}
   {% if post.active %}
   <div class="project">
     <div class="project-content">
@@ -30,7 +30,7 @@
   <span >Previous Projects</span>
 </div>
 <div class="projects">
-  {% for post in site.posts  %}
+  {% for post in site.projects %}
   {% if post.active == false %}
   <div class="project">
     <div class="project-content">

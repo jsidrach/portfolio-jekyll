@@ -15,6 +15,10 @@ exclude: ["README.md", "Gemfile", "Gemfile.lock", "LICENSE"]
 sass:
   style: compressed
 
+# Projects collection
+collections:
+  - projects
+
 # Navigation bar
 navbar:
   - name: GitHub
