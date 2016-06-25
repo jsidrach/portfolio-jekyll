@@ -1,6 +1,6 @@
 # Portfolio-Jekyll
 
-Simple and lightweight personal portfolio theme for Jekyll. Powered by[GitHub Pages](https://pages.github.com/).
+Simple and lightweight personal portfolio theme for Jekyll. Powered by [GitHub Pages](https://pages.github.com/).
 
 ## [Demo](http://jsidrach.github.io/portfolio-jekyll/)
 
