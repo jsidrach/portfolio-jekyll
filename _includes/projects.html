@@ -27,7 +27,7 @@
 </div>
 <div class="projects">
   {% for post in site.projects %}
-  {% if post.active %}
+  {% if post.active == false %}
   <div class="project">
     <div class="project-content">
     <span><a href="{{ post.link }}">{{ post.title }}</a></span>
