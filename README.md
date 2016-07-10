@@ -39,6 +39,6 @@ List of assets used in this template:
     * [CV](https://www.iconfinder.com/icons/299090/file_word_icon)
     * [Mail](https://www.iconfinder.com/icons/287559/mail_icon)
 
-## Licensing
+## License
 
 [MIT](LICENSE) - Feel free to use and edit.
