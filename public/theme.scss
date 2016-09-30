@@ -184,6 +184,7 @@ $cb-shadow-size: 96px;
   background-position: center center;
   background-repeat: no-repeat;
 
+  border: 2px solid $color-light;
   border-radius: 50%;
 
   @include transition(all 0.2s ease-out);
@@ -228,7 +229,7 @@ $cb-shadow-size: 96px;
   &:hover {
     z-index: 9000;
 
-    margin-top: ($cb-height - $cb-icon-zoom*$cb-icon-size) / 2;
+    margin-top: ($cb-height - $cb-icon-zoom * $cb-icon-size) / 2;
     margin-left: -$cb-icon-size * ($cb-icon-zoom - 1) / 2;
 
     @include transition(all 0.2s ease-out);
@@ -240,7 +241,6 @@ $cb-shadow-size: 96px;
       margin-top: -($cb-shadow-size - $cb-icon-zoom * $cb-icon-size) / 2;
       margin-left: -($cb-shadow-size - $cb-icon-zoom * $cb-icon-size) / 2;
 
-      opacity: 0.6;
       background-color: $color-light;
       border-radius: 50%;
     }
@@ -250,6 +250,7 @@ $cb-shadow-size: 96px;
       height: $cb-icon-zoom * $cb-icon-size;
       line-height: $cb-icon-zoom * $cb-icon-size;
 
+      border: none;
       border-radius: 50%;
     }
 

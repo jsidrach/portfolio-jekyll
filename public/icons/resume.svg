@@ -55,14 +55,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
+     inkscape:window-height="1019"
      id="namedview24"
      showgrid="false"
      inkscape:zoom="4.9166667"
      inkscape:cx="49.399142"
      inkscape:cy="30.37026"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <rect
@@ -72,62 +72,54 @@
      height="64"
      x="0"
      y="0" />
+  <path
+     style="fill:#f5f5f5;fill-opacity:1"
+     inkscape:connector-curvature="0"
+     id="path8"
+     d="m 21.266667,13.184181 c -1.69372,0 -3.066666,1.539476 -3.066666,3.421058 l 0,13.684232 0,6.842116 0,10.263174 c 0,1.881582 1.372946,3.421058 3.066666,3.421058 l 21.466666,0 c 1.694334,0 3.066667,-1.539476 3.066667,-3.421058 l 0,-10.263174 0,-6.842116 0,-6.842116 -9.2,-10.263174 -15.333333,0 z" />
+  <path
+     style="fill:#ffffff;fill-opacity:1"
+     inkscape:connector-curvature="0"
+     id="path10"
+     d="m 45.8,23.447355 -9.2,-10.263174 0,6.842116 c 0,1.881582 1.372333,3.421058 3.066667,3.421058 l 6.133333,0 z" />
   <g
-     id="g5672"
-     transform="matrix(1.5333333,0,0,1.5333333,87.199999,11.131048)">
-    <g
-       transform="matrix(1,0,0,1.1155624,0,-0.15473806)"
-       id="g5668">
-      <path
-         style="fill:#e0e0d1;fill-opacity:1"
-         inkscape:connector-curvature="0"
-         id="path8"
-         d="m -43,1.339 c -1.1046,0 -2,0.9 -2,2 l 0,8 0,4 0,6 c 0,1.1 0.8954,2 2,2 l 14,0 c 1.105,0 2,-0.9 2,-2 l 0,-6 0,-4 0,-4 -6,-6 -10,0 z" />
-      <path
-         style="fill:#ffffff;fill-opacity:1"
-         inkscape:connector-curvature="0"
-         id="path10"
-         d="m -27,7.339 -6,-6 0,4 c 0,1.1 0.895,2 2,2 l 4,0 z" />
-    </g>
-    <g
-       transform="matrix(1,0,0,1.1016949,0,0.02711861)"
-       style="fill:#bab9ae;fill-opacity:1;stroke:none"
-       id="g4205">
-      <rect
-         style="fill:#bab9ae;fill-opacity:1;stroke:none"
-         height="1"
-         width="6"
-         x="-42"
-         y="6.4000001"
-         id="rect14" />
-      <rect
-         style="fill:#bab9ae;fill-opacity:1;stroke:none"
-         height="1"
-         width="12"
-         x="-42"
-         y="12.4"
-         id="rect18" />
-      <rect
-         style="fill:#bab9ae;fill-opacity:1;stroke:none"
-         height="1"
-         width="12"
-         x="-42"
-         y="15.4"
-         id="rect20" />
-      <rect
-         style="fill:#bab9ae;fill-opacity:1;stroke:none"
-         height="1"
-         width="12"
-         x="-42"
-         y="18.4"
-         id="rect22" />
-      <rect
-         style="fill:#bab9ae;fill-opacity:1;stroke:none"
-         height="1"
-         width="12"
-         x="-42"
-         y="9.3999996"
-         id="rect18-8" />
-    </g>
+     id="g4205"
+     style="fill:#cccccc;fill-opacity:1;stroke:none"
+     transform="matrix(1.5333333,0,0,1.6892655,87.199999,11.17263)">
+    <rect
+       id="rect14"
+       y="6.4000001"
+       x="-42"
+       width="6"
+       height="1"
+       style="fill:#cccccc;fill-opacity:1;stroke:none" />
+    <rect
+       id="rect18"
+       y="12.4"
+       x="-42"
+       width="12"
+       height="1"
+       style="fill:#cccccc;fill-opacity:1;stroke:none" />
+    <rect
+       id="rect20"
+       y="15.4"
+       x="-42"
+       width="12"
+       height="1"
+       style="fill:#cccccc;fill-opacity:1;stroke:none" />
+    <rect
+       id="rect22"
+       y="18.4"
+       x="-42"
+       width="12"
+       height="1"
+       style="fill:#cccccc;fill-opacity:1;stroke:none" />
+    <rect
+       id="rect18-8"
+       y="9.3999996"
+       x="-42"
+       width="12"
+       height="1"
+       style="fill:#cccccc;fill-opacity:1;stroke:none" />
   </g>
 </svg>
