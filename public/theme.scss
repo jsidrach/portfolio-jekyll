@@ -180,7 +180,8 @@ $cb-shadow-size: 96px;
   position: absolute;
   overflow: hidden;
   display: inline-block;
-  background-size: 100% 100%;
+  background-color: $color-light;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 

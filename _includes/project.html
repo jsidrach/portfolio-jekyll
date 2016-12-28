@@ -1,15 +1,15 @@
 <div class="project">
   <div class="project-content">
     <span>
-      <a href="{{ include.post.link }}">{{ include.post.title }}</a>
+      <a href="{{ post.link }}">{{ post.title }}</a>
     </span>
-    {{ include.post.content }}
+    {{ post.content }}
   </div>
-  {% if include.post.tags %}
+  {% if post.tags %}
   <div class="project-info">
     <p>
       <strong># </strong>
-      {% for tag in include.post.tags %}
+      {% for tag in post.tags %}
         {% if tag.url %}
           <a href="{{ tag.url }}">
         {% endif %}
