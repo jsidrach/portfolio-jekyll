@@ -18,9 +18,7 @@ html {
 }
 
 body {
-  background: url('background.png') no-repeat center center fixed;
-  background-size: cover;
-  //background: linear-gradient(#FFFDBC, #C9B6D1) no-repeat center center fixed;
+  background: linear-gradient(to bottom, rgb(50, 77, 126) 0%, rgb(90, 140, 149) 40%, rgb(216, 178, 167) 70%, rgb(115, 87, 110) 89%, rgb(33, 14, 67) 100%) no-repeat center center fixed;
 }
 
 a {
@@ -134,21 +132,7 @@ $cb-icon-size: 64px;
 $cb-icon-zoom: 1.3125;
 $cb-shadow-size: 96px;
 
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
-
-@mixin transition($transition) {
-  -webkit-transition: $transition;
-     -moz-transition: $transition;
-      -ms-transition: $transition;
-          transition: $transition;
-}
-
-@mixin text-shadow($color) {
+@mixin text-border($color) {
   text-shadow: 1px 0 0 $color, -1px 0 0 $color,
                0 1px 0 $color, 0 -1px 0 $color,
                0.5px 0.5px $color, -0.5px -0.5px 0 $color,
@@ -188,7 +172,7 @@ $cb-shadow-size: 96px;
   border: 2px solid $color-light;
   border-radius: 50%;
 
-  @include transition(all 0.2s ease-out);
+  transition: all 0.2s ease-out;
 }
 
 .circlebar-shadow {
@@ -200,7 +184,7 @@ $cb-shadow-size: 96px;
   text-indent: -9000px;
 
   border-radius: 50%;
-  @include transition(all 0.4s ease);
+  transition: all 0.4s ease;
 }
 
 .circlebar-text {
@@ -215,8 +199,8 @@ $cb-shadow-size: 96px;
   visibility: hidden;
   opacity: 0;
 
-  @include text-shadow(black);
-  @include transition(opacity 0.2s ease-in-out);
+  @include text-border(black);
+  transition: opacity 0.2s ease-in-out;
 }
 
 .circlebar-link {
@@ -225,7 +209,7 @@ $cb-shadow-size: 96px;
   display: block;
   margin-top: ($cb-height - $cb-icon-size) / 2;
 
-  @include transition(all 0.2s ease);
+  transition: all 0.2s ease;
 
   &:hover {
     z-index: 9000;
@@ -233,7 +217,7 @@ $cb-shadow-size: 96px;
     margin-top: ($cb-height - $cb-icon-zoom * $cb-icon-size) / 2;
     margin-left: -$cb-icon-size * ($cb-icon-zoom - 1) / 2;
 
-    @include transition(all 0.2s ease-out);
+    transition: all 0.2s ease-out;
 
     .circlebar-shadow {
       width: $cb-shadow-size;
@@ -259,7 +243,7 @@ $cb-shadow-size: 96px;
       visibility: visible;
       opacity: 1;
 
-      @include transition(opacity 0.2s ease-in-out);
+      transition: opacity 0.2s ease-in-out;
     }
   }
 }

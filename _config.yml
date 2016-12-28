@@ -36,3 +36,14 @@ navbar:
   - name: Mail
     link: mailto:example@mail.com
     icon: mail.svg
+
+# Compress html
+compress_html:
+  clippings: all
+  comments: all
+  startings: []
+  endings: []
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
