@@ -8,10 +8,10 @@
         {% else %}
           <a href="{{ circle.link }}" class="circlebar-link">
         {% endif %}
-        <span class="circlebar-shadow"></span>
-        <span class="circlebar-icon" style="background-size: cover; background-image:url({{ circle.icon | prepend:'/public/icons/' | prepend:site.baseurl }});"></span>
-        <span class="circlebar-text">{{ circle.name }}</span>
-        </a>
+            <span class="circlebar-shadow"></span>
+            <span class="circlebar-icon" style="background-size: cover; background-image:url({{ circle.icon | prepend:'/public/icons/' | prepend:site.baseurl }});"></span>
+            <span class="circlebar-text">{{ circle.name }}</span>
+          </a>
       </div>
     {% endfor %}
   </div>
