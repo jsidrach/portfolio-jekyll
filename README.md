@@ -24,10 +24,9 @@ Powered by [GitHub Pages](https://pages.github.com/).
 
 - Single page (projects)
 - Lightweight
-- Responsive via flex boxes and media queries
-- No pagination
-- No external libraries/dependencies
 - No JavaScript
+- No pagination
+- Responsive via flex boxes and media queries
 
 ## Assets
 
