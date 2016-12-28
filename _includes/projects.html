@@ -1,5 +1,5 @@
 <div class="post-separator">
-  <span >Active Projects</span>
+  <span>Active Projects</span>
 </div>
 <div class="projects">
   {% for post in site.projects %}
@@ -9,6 +9,7 @@
     <span><a href="{{ post.link }}">{{ post.title }}</a></span>
       {{ post.content }}
     </div>
+    {% if post.tags %}
     <div class="project-info">
       <p>
         <strong># </strong>
@@ -17,22 +18,24 @@
         {% endfor %}
       </p>
     </div>
+    {% endif %}
   </div>
   {% endif %}
   {% endfor %}
 </div>
 
 <div class="post-separator">
-  <span >Previous Projects</span>
+  <span>Previous Projects</span>
 </div>
 <div class="projects">
   {% for post in site.projects %}
-  {% if post.active == false %}
+  {% unless post.active %}
   <div class="project">
     <div class="project-content">
     <span><a href="{{ post.link }}">{{ post.title }}</a></span>
       {{ post.content }}
     </div>
+    {% if post.tags %}
     <div class="project-info">
       <p>
         <strong># </strong>
@@ -41,7 +44,8 @@
         {% endfor %}
       </p>
     </div>
+    {% endif %}
   </div>
-  {% endif %}
+  {% endunless %}
   {% endfor %}
 </div>
