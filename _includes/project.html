@@ -1,0 +1,23 @@
+<div class="project">
+  <div class="project-content">
+  <span><a href="{{ include.post.link }}">{{ include.post.title }}</a></span>
+    {{ include.post.content }}
+  </div>
+  {% if include.post.tags %}
+  <div class="project-info">
+    <p>
+      <strong># </strong>
+      {% for tag in include.post.tags %}
+        {% if tag.url %}
+          <a href="{{ tag.url }}">
+        {% endif %}
+        {{ tag.name }}
+        {% if tag.url %}
+          </a>
+        {% endif %}
+        {% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>
+  </div>
+  {% endif %}
+</div>
