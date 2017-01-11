@@ -257,7 +257,7 @@ html {
   font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(fonts/RobotoSlab-Regular.woff2) format('woff2');
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(public/fonts/RobotoSlab-Regular.woff2) format('woff2');
 }
 
 // Roboto Slab - Bold
@@ -265,5 +265,5 @@ html {
   font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(fonts/RobotoSlab-Bold.woff2) format('woff2');
+  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(public/fonts/RobotoSlab-Bold.woff2) format('woff2');
 }
