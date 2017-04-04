@@ -160,14 +160,15 @@ $cb-shadow-size: 96px;
   overflow: hidden;
   display: inline-block;
   background-color: $color-light;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 
   border: 2px solid $color-light;
   border-radius: 50%;
 
   transition: all 0.2s ease-out;
+
+  svg {
+    transition: all 0.2s ease-out;
+  }
 }
 
 .circlebar-shadow {
@@ -232,6 +233,13 @@ $cb-shadow-size: 96px;
 
       border: none;
       border-radius: 50%;
+
+      svg {
+        width: $cb-icon-zoom * $cb-icon-size;
+        height: $cb-icon-zoom * $cb-icon-size;
+
+        transition: all 0.2s ease-out;
+      }
     }
 
     .circlebar-text {

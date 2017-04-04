@@ -2,7 +2,8 @@
   xmlns:svg="http://www.w3.org/2000/svg"
   xmlns="http://www.w3.org/2000/svg"
   width="64"
-  height="64">
+  height="64"
+  viewBox="0 0 64 64">
   <rect
     style="fill:#1686b0;stroke:#1686b0;stroke-width:1.30612254"
     width="62.693878"
