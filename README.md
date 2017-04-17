@@ -6,6 +6,13 @@ Powered by [GitHub Pages](https://pages.github.com/).
 
 ## [Demo](http://jsidrach.github.io/portfolio-jekyll/)
 
+## (No) Features
+
+- Single page
+- No JavaScript
+- Responsive via flex boxes and media queries
+- Lightweight (< 15kB in total, < 5kB compressed)
+
 ## Installation
 
 - [Fork this repository](https://github.com/jsidrach/portfolio-jekyll/fork)
@@ -19,24 +26,6 @@ Powered by [GitHub Pages](https://pages.github.com/).
 
 * _config.yml - Jekyll and navigation bar configuration
 * _projects/ - descriptions of the projects in Markdown format
-
-## (No) Features
-
-- Single page (projects)
-- Lightweight
-- No JavaScript
-- No pagination
-- Responsive via flex boxes and media queries
-
-## Assets
-
-List of assets used in this template:
-
-* Top bar icons (modified):
-    * [GitHub](https://www.iconfinder.com/icons/107105/github_square_icon)
-    * [LinkedIn](https://www.iconfinder.com/icons/294706/circle_linkedin_icon)
-    * [Resume](https://www.iconfinder.com/icons/299090/file_word_icon)
-    * [Mail](https://www.iconfinder.com/icons/287559/mail_icon)
 
 ## License
 
