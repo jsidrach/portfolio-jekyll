@@ -2,7 +2,7 @@
   <span>Active Projects</span>
 </div>
 <div class="projects">
-  {% for post in site.projects %}
+  {% for post in site.projects reversed %}
   {% if post.active %}
     {% include project.html param="post" variable-param=post %}
   {% endif %}
@@ -13,7 +13,7 @@
   <span>Previous Projects</span>
 </div>
 <div class="projects">
-  {% for post in site.projects %}
+  {% for post in site.projects reversed %}
   {% unless post.active %}
     {% include project.html param="post" variable-param=post %}
   {% endunless %}
