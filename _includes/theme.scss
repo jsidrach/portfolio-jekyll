@@ -3,10 +3,10 @@
 //
 
 // Switch threshold for small screens
-$small-max-width: 480px;
+$small-max-width: 640px;
 
 // Colors
-$color-light: #F5F5F5;
+$color-light: white;
 $color-dark: #3A3A3A;
 
 html {
@@ -47,7 +47,8 @@ a {
 
   @media (max-width: $small-max-width) {
     display: inline;
-    font-size: 1.75em;
+    vertical-align: middle;
+    font-size: 2em;
 
     &::after {
       content: ' | ';
@@ -56,12 +57,13 @@ a {
 }
 
 .subtitle {
-  margin: 0 0 0 0;
+  margin: 0;
   font-size: 1.5em;
   font-weight: normal;
 
   @media (max-width: $small-max-width) {
     display: inline;
+    vertical-align: middle;
     font-size: 1em;
   }
 }
@@ -83,11 +85,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;
 
-  margin: 0 50px 25px 50px;
-
-  @media (max-width: 1.5 * $small-max-width) {
-    margin: 0;
-  }
+  margin: 0;
 }
 
 .project {
