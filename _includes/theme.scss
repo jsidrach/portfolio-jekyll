@@ -30,6 +30,7 @@ a {
 }
 
 .content {
+  margin-top: -10px;
   color: $color-dark;
 }
 
@@ -70,7 +71,7 @@ a {
 
 .post-separator {
   text-align: center;
-  margin: 5px auto 7px auto;
+  margin: 15px auto 7px auto;
 
   span {
     font-size: 1.25em;
